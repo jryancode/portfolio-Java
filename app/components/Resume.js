@@ -116,7 +116,7 @@ export default function Resume() {
                     My <span className="base-color">Resume</span>
                   </h2>
                   <p className="text-muted">
-                    Backend Systems Engineer with experience building scalable operational platforms, backend workflows, and data-driven business systems across healthcare, ecommerce, and enterprise environments. Skilled in SQL-based data processing, backend APIs, reporting workflows, system integrations, and cloud-based infrastructure supporting high-volume operational applications and internal reporting systems.
+                    Senior Software Engineer with experience building scalable business platforms, workflow-driven enterprise systems, ecommerce integrations, and AI-powered applications. Skilled in backend architecture, cloud infrastructure, APIs, distributed systems, and scalable frontend applications using React, Node.js, Python, and cloud-native technologies.
                   </p>
                 </div>
               </div>
