@@ -1,81 +1,139 @@
 const portfolios = [
   {
-    id: 'billing-ai',
-    title: 'Patient Billing AI Assistant',
-    company: 'Collectly',
-    tags: 'RAG · Agents · Healthcare',
+    id: 'ai-avatar',
+    title: 'AI Conversational Avatar',
+    company: 'HeyGen · WebRTC · LLM',
+    tags: 'AI · WebRTC · LLM · Real-Time Streaming',
     description:
-      'Agentic workflows on a patient billing platform that read statements, answer balance and insurance questions, and route edge cases to staff. Built a RAG layer over payer policies, billing codes, and account history so the assistant gives grounded answers with citations.',
+      'Real-time talking avatar built with the HeyGen Streaming API, WebRTC, and LLM integration. Users speak or type to a lifelike AI avatar that responds with synchronized lip movement, voice, and natural conversation, all streamed in real time through a browser-based interface.',
     results: [
-      'Cut manual review on routine tickets by ~45%',
-      'Raised answer accuracy in internal evals from the high 70s to ~92%',
+      'Sub-second avatar response latency via WebRTC peer connection',
+      'Integrated LLM for dynamic, context-aware conversational responses',
+      'Deployed as a browser-based app with no plugin requirements',
     ],
-    skills: 'Python / FastAPI / LangGraph / OpenAI / pgvector / RAG / AWS Bedrock',
+    skills: 'JavaScript · HeyGen Streaming API · WebRTC · OpenAI · Node.js',
+    video: '/assets/img/portfolio/ai-avatar/demo.mp4',
   },
   {
-    id: 'doc-assistant',
-    title: 'Financial Document Assistant',
-    company: 'Helicap',
-    tags: 'LLM · Fintech',
+    id: 'ocr',
+    title: 'OCR & Scene Text Recognition System',
+    company: 'Computer Vision · OCR',
+    tags: 'OCR · Computer Vision · Deep Learning · Multilingual',
     description:
-      'LLM-powered document assistant that pulls figures and terms out of financial PDFs for a lending and credit investment team. Uses structured output and function calling to extract deal-critical data with guardrails preventing unverified figures from being returned.',
+      'Detecting and extracting text from images across multiple domains, including receipts, license plates, and natural scene signage, with bounding-box localization and multilingual character recognition. The system handles varied fonts, lighting conditions, and orientations, outputting structured text alongside the source image with localized annotations.',
     results: [
-      'Reduced manual data entry time per deal by ~60%',
-      'Added agent-style tool calling to query internal APIs for live numbers',
+      'Accurately extracts structured data from receipts including items, totals, and timestamps',
+      'Localizes and reads license plates from real-world vehicle photos',
+      'Recognizes multilingual scene text from street signs with high accuracy',
     ],
-    skills: 'Python / FastAPI / OpenAI / Anthropic / Structured Output / LangChain',
+    skills: 'Python · EasyOCR · OpenCV · PyTorch · Tesseract · NumPy',
+    workflows: [
+      { img: '/assets/img/portfolio/ocr/receipt.png', label: 'Receipt OCR - structured data extraction with side-by-side output' },
+      { img: '/assets/img/portfolio/ocr/license-plate.png', label: 'License Plate Recognition - bounding-box detection on real vehicle photos' },
+      { img: '/assets/img/portfolio/ocr/scene-text.png', label: 'Scene Text Recognition - multilingual street sign extraction' },
+    ],
   },
   {
-    id: 'rag-research',
-    title: 'RAG Research Assistant',
-    company: 'Helicap',
-    tags: 'RAG · Fintech',
+    id: 'linkedin-automation',
+    title: 'LinkedIn Lead Generation Automation',
+    company: 'Make.com · Airtable · PhantomBuster',
+    tags: 'Make.com · Airtable · PhantomBuster · Lead Generation · Scraping',
     description:
-      'Retrieval augmented generation system over company filings and internal memos that lets analysts find supporting context in seconds. Built on pgvector with semantic and hybrid search, reranking, and a FastAPI backend with full tracing per query.',
+      'Automated LinkedIn prospecting pipeline built in Make.com, pulling target profiles from Airtable and launching PhantomBuster agents via API to scrape and enrich lead data at scale. The pipeline handles profile discovery, data enrichment, and writes results back to Airtable automatically, turning a manual outreach process into a fully hands-off system.',
     results: [
-      'Analysts surface context in seconds instead of digging through folders',
-      'Set up cost dashboards tracking token usage, latency, and failure rates per feature',
+      'Fully automated profile scraping and lead enrichment with zero manual steps',
+      'PhantomBuster agents triggered dynamically from Airtable input records',
+      'Enriched lead data written back to Airtable for seamless CRM handoff',
     ],
-    skills: 'Python / FastAPI / pgvector / PostgreSQL / LangChain / OpenAI / LangSmith',
+    skills: 'Make.com · Airtable · PhantomBuster API · LinkedIn · REST API · JSON',
+    video: '/assets/img/portfolio/linkedin-automation/demo.mp4',
   },
   {
-    id: 'eval-pipeline',
-    title: 'LLM Evaluation Pipeline',
-    company: 'Collectly',
-    tags: 'LLM · Evaluation · Healthcare',
+    id: 'workflow-automation',
+    title: 'Workflow Automation & AI Agent Systems',
+    company: 'n8n · LLM · No-Code',
+    tags: 'n8n · Automation · AI Agents · CRM · API Integration',
     description:
-      'End-to-end evaluation framework with a labeled regression set and automated scoring in CI so prompt and model changes are checked before release rather than after a customer complaint. Uses Ragas for answer quality scoring and LangSmith for tracing.',
+      'Building no-code/low-code automation pipelines with n8n, integrating CRMs, APIs, LLMs, and business tools to eliminate manual work. Each workflow handles a distinct business process end-to-end, from deal syncing and invoice processing to AI-powered bots and scheduled reminders.',
     results: [
-      'Prompt and model changes validated before every release',
-      'Hallucination and safety checks built into the pipeline',
+      'Eliminated manual data entry across CRM, billing, and communication tools',
+      'Reduced invoice follow-up time with fully automated overdue reminder sequences',
+      'Delivered AI image generation directly to Telegram with zero human intervention',
     ],
-    skills: 'Python / Ragas / LangSmith / GitHub Actions / CI/CD / OpenAI',
+    skills: 'n8n · HubSpot · Gmail · AWS SES · OpenAI DALL·E · Telegram API · REST APIs',
+    workflows: [
+      { img: '/assets/img/portfolio/workflow-automation/hubspot-sync.png', label: 'End-to-End Sales Ops Automation (HubSpot → Multi-Tool Sync)' },
+      { img: '/assets/img/portfolio/workflow-automation/invoice-pipeline.png', label: 'Invoice & Payment Processing Pipeline' },
+      { img: '/assets/img/portfolio/workflow-automation/dalle-telegram.png', label: 'AI Image Generation Bot (DALL·E + Telegram)' },
+      { img: '/assets/img/portfolio/workflow-automation/overdue-reminders.png', label: 'Automated Overdue Invoice Reminders' },
+    ],
   },
   {
-    id: 'cost-optimizer',
-    title: 'AI Cost & Latency Optimizer',
-    company: 'Collectly',
-    tags: 'LLM · Model Routing · Healthcare',
+    id: 'ai-support-agent',
+    title: 'AI Customer Support Agent (Gmail + Gemini)',
+    company: 'Gmail · Gemini · LLM',
+    tags: 'AI Agents · Gemini · Gmail · Inbox Automation · Memory',
     description:
-      'Model routing, retrieval caching, and request batching system that sends simpler LLM calls to smaller, cheaper models while routing complex reasoning to larger ones. Includes observability dashboards in Datadog tracking spend and latency per feature.',
+      'A conversational AI agent that listens for incoming chat messages, reasons with Google Gemini, retains context via memory, and drafts and sends replies through Gmail. A self-contained AI assistant for inbox automation, the agent maintains conversation history across sessions and handles multi-turn dialogue without human intervention.',
     results: [
-      'Dropped average response latency by ~35%',
-      'Trimmed monthly LLM spend by ~30%',
+      'Fully automated end-to-end reply flow from inbox to sent message',
+      'Persistent memory ensures contextually relevant multi-turn responses',
+      'Integrates Google Gemini reasoning with Gmail API for seamless automation',
     ],
-    skills: 'Python / AWS Bedrock / OpenAI / Anthropic / Redis / Datadog / Sentry',
+    skills: 'Python · Google Gemini API · Gmail API · LangChain · Memory · OAuth 2.0',
+    video: '/assets/img/portfolio/ai-support-agent/demo.mp4',
   },
   {
-    id: 'support-ai',
-    title: 'Generative AI Support Reply',
-    company: 'Alliance Software',
-    tags: 'LLM · Agents',
+    id: 'virtual-staging',
+    title: 'AI Virtual Staging for Real Estate',
+    company: 'AI Image Generation · Real Estate',
+    tags: 'Generative AI · Real Estate · Image Generation · Before/After',
     description:
-      'Early generative AI feature that drafts customer support replies from a knowledge base. Indexes support documentation and product FAQs for retrieval, then uses an LLM to compose contextually accurate draft replies for agents to review and send.',
+      'Transforms empty rooms into furnished, styled interiors using AI image generation. The tool takes a photo of a bare space and produces a fully staged version with furniture, lighting, and decor, complete with an interactive before/after comparison slider so clients can instantly see the transformation.',
     results: [
-      'Pilot team cut average first response time by ~40%',
-      'Deployed as a backend service in Python with a GitHub Actions CI pipeline',
+      'Reduces staging costs compared to physical furniture rental',
+      'Interactive before/after slider for instant client presentation',
+      'Supports multiple style presets: modern, minimalist, Scandinavian, and more',
     ],
-    skills: 'Python / Node.js / OpenAI / RAG / PostgreSQL / GitHub Actions',
+    skills: 'Python · Stable Diffusion · ControlNet · JavaScript · REST API',
+    video: '/assets/img/portfolio/virtual-staging/demo.mp4',
+  },
+  {
+    id: 'img-to-video',
+    title: 'AI Image-to-Video Generation Pipeline',
+    company: 'ComfyUI · Wan Model',
+    tags: 'Generative AI · ComfyUI · Wan · Prompt Engineering',
+    description:
+      'Animates still images into fluid video clips using ComfyUI and the Wan model. Built a node-based workflow with custom prompt engineering to control motion style, camera movement, and temporal consistency, turning a single frame into a dynamic, realistic video sequence.',
+    results: [
+      'Produced smooth, temporally consistent video from single still images',
+      'Custom prompt engineering pipeline for controlled motion and style',
+      'Node-based ComfyUI workflow enabling rapid iteration and non-destructive edits',
+    ],
+    skills: 'ComfyUI · Wan Model · Python · Prompt Engineering · Stable Diffusion',
+    video: '/assets/img/portfolio/img-to-video/demo.mp4',
+  },
+  {
+    id: 'object-detection',
+    title: 'Object Detection',
+    company: 'Computer Vision',
+    tags: 'Computer Vision · Deep Learning · YOLO',
+    description:
+      'Real-time object detection system built with deep learning, capable of identifying and localizing multiple object classes across diverse environments, including factory floors, aerial views, highways, and crowded pedestrian scenes. Detects people, vehicles, and common objects with confidence scores displayed per bounding box.',
+    results: [
+      'Detects multiple object classes in real time across varied scenes',
+      'Applied to factory worker monitoring, vehicle tracking, and pedestrian detection',
+      'Works on both static images and live video streams',
+    ],
+    skills: 'Python · YOLOv8 · OpenCV · PyTorch · NumPy',
+    images: [
+      '/assets/img/portfolio/object-detection/od-1.jpg',
+      '/assets/img/portfolio/object-detection/od-2.png',
+      '/assets/img/portfolio/object-detection/od-3.png',
+      '/assets/img/portfolio/object-detection/od-4.png',
+      '/assets/img/portfolio/object-detection/od-5.png',
+    ],
+    video: '/assets/img/portfolio/object-detection/object_detect.mp4',
   },
 ];
 
@@ -92,7 +150,7 @@ export default function PortfolioModals() {
           aria-labelledby="portfolioModalScrollable"
           aria-hidden="true"
         >
-          <div className="modal-dialog modal-dialog-scrollable" role="document">
+          <div className="modal-dialog modal-dialog-scrollable modal-lg" role="document">
             <div className="modal-content bg-white">
               <div className="modal-header">
                 <h5 className="modal-title" id="portfolioModalScrollable">
@@ -123,6 +181,50 @@ export default function PortfolioModals() {
                             {portfolio.description}
                           </p>
                         </div>
+
+                        {portfolio.video && (
+                          <div className="mt-4 mb-3">
+                            <video
+                              controls
+                              style={{ width: '100%', borderRadius: '8px' }}
+                              preload="metadata"
+                            >
+                              <source src={portfolio.video} type="video/mp4" />
+                            </video>
+                          </div>
+                        )}
+
+                        {portfolio.images && (
+                          <div className="row mt-3">
+                            {portfolio.images.map((img, i) => (
+                              <div className="col-6 mb-3" key={i}>
+                                <img
+                                  src={img}
+                                  alt={`${portfolio.title} ${i + 1}`}
+                                  style={{ width: '100%', borderRadius: '6px', objectFit: 'cover' }}
+                                />
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        {portfolio.workflows && (
+                          <div className="mt-3">
+                            {portfolio.workflows.map((wf, i) => (
+                              <div className="mb-4" key={i}>
+                                <img
+                                  src={wf.img}
+                                  alt={wf.label}
+                                  style={{ width: '100%', borderRadius: '6px', border: '1px solid #eee' }}
+                                />
+                                <p className="text-muted text-center mt-2 mb-0" style={{ fontSize: '13px' }}>
+                                  <strong>{wf.label}</strong>
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
                         <div className="row contact-info mt-4">
                           <div className="col-12 col-md-10 offset-md-1">
                             <div className="text-center">
