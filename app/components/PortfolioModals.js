@@ -135,6 +135,23 @@ const portfolios = [
     ],
     video: '/assets/img/portfolio/object-detection/object_detect.mp4',
   },
+  {
+    id: 'leaseflow',
+    title: 'LeaseFlow AI',
+    company: 'Voice AI · LLM Agents · Real Estate',
+    tags: 'AI Agents · Voice AI · Lead Qualification · Real Estate · Automation',
+    description:
+      'AI agent system that automates the real estate leasing process end-to-end: qualifying inbound leads, handling tenant communication, and answering phone calls with a voice AI agent. Replaces manual leasing-agent screening with always-on automation that engages prospects instantly, gathers qualification details, and routes ready-to-lease tenants to the property team.',
+    results: [
+      'Qualifies inbound leasing leads automatically without agent intervention',
+      'Answers and handles tenant phone calls with real-time voice AI',
+      'Automates tenant communication across the leasing funnel, reducing response time to seconds',
+    ],
+    skills: 'LLM Agents · Voice AI · Real Estate APIs · Automation · Python',
+    video: '/assets/img/portfolio/leaseflow/demo.mp4',
+    images: ['/assets/img/portfolio/leaseflow/dashboard.png'],
+    github: 'https://github.com/jryancode/LeaseFlow',
+  },
 ];
 
 export default function PortfolioModals() {
@@ -236,6 +253,17 @@ export default function PortfolioModals() {
                               </ul>
                               <h6 className="mt-3">Stack:</h6>
                               <p className="text-muted mb-0">{portfolio.skills}</p>
+                              {portfolio.github && (
+                                <a
+                                  href={portfolio.github}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="pill-button mt-3"
+                                >
+                                  <i className="lni-github-original mr-2"></i>
+                                  View on GitHub
+                                </a>
+                              )}
                             </div>
                           </div>
                         </div>

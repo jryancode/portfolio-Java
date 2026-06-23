@@ -61,6 +61,13 @@ const portfolios = [
     filter: 'cv deeplearning',
     company: 'Computer Vision · OCR',
   },
+  {
+    title: 'LeaseFlow AI',
+    tileVideo: '/assets/img/portfolio/leaseflow/demo.mp4',
+    target: '#portfolio-leaseflow',
+    filter: 'ai agents automation realestate',
+    company: 'Voice AI · LLM Agents · Real Estate',
+  },
 ];
 
 export default function Portfolio() {
