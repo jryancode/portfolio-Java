@@ -152,6 +152,21 @@ const portfolios = [
     images: ['/assets/img/portfolio/leaseflow/dashboard.png'],
     github: 'https://github.com/jryancode/LeaseFlow',
   },
+  {
+    id: 'insight-hub',
+    title: 'Insight Hub',
+    company: 'Data Analytics · KPI Dashboards · Forecasting',
+    tags: 'Data Engineering · KPI Dashboard · Revenue Forecasting · Multi-Company Analytics',
+    description:
+      'Unified KPI dashboard and revenue forecasting system for a leadership team running several companies whose data was spread across separate CRM, recruiting, marketing, and finance tools. Pulls from all those sources into a single warehouse and presents cross-company KPIs with month-over-month change, per-company drill-down, a three-month revenue forecast, and an automatic plain-English summary of each month. The pipeline is built so connecting a real source system is a one-step change, not a rewrite.',
+    results: [
+      'Replaced scattered CRM, recruiting, marketing, and finance tools with one cross-company KPI view',
+      'Three-month revenue forecast generated automatically from historical data with scikit-learn',
+      'Auto-generated plain-English monthly summary alongside per-company drill-down',
+    ],
+    skills: 'Python · Flask · pandas · scikit-learn · SQLite',
+    video: '/assets/img/portfolio/insight-hub/demo.mp4',
+  },
 ];
 
 export default function PortfolioModals() {

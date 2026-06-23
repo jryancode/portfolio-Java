@@ -68,6 +68,13 @@ const portfolios = [
     filter: 'ai agents automation realestate',
     company: 'Voice AI · LLM Agents · Real Estate',
   },
+  {
+    title: 'Insight Hub',
+    tileVideo: '/assets/img/portfolio/insight-hub/demo.mp4',
+    target: '#portfolio-insight-hub',
+    filter: 'ai automation',
+    company: 'Data Analytics · KPI Dashboards · Forecasting',
+  },
 ];
 
 export default function Portfolio() {
